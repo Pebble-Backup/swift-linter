@@ -88,9 +88,9 @@ final class SwiftLintLinter extends ArcanistExternalLinter {
 
   protected function getDefaultMessageSeverity($code) {
     if ($code == 'error') {
-      return ArcanistLintSeverity::SEVERITY_ERROR;
-    } else {
       return ArcanistLintSeverity::SEVERITY_WARNING;
+    } else {
+      return ArcanistLintSeverity::SEVERITY_ADVICE;
     }
   }
 }
